@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
-import { loadBudget, saveBudget, lsSave } from "./lib/api.js";
+import { loadBudget, saveBudget, lsSave } from "./api.js";
 
 // ── Constants ─────────────────────────────────────────────────────────────────
 
