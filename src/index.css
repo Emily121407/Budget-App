@@ -1,0 +1,65 @@
+:root {
+  --text:       #111827;
+  --text-muted: #6b7280;
+  --text-faint: #9ca3af;
+  --bg:         #ffffff;
+  --surface:    #f9fafb;
+  --border:     rgba(0,0,0,0.08);
+  --border-mid: rgba(0,0,0,0.14);
+  --green:      #10b981;
+  --green-bg:   #d1fae5;
+  --red:        #ef4444;
+  --red-bg:     #fee2e2;
+  --amber:      #d97706;
+  --amber-bg:   #fef3c7;
+  --amber-bd:   rgba(217,119,6,0.28);
+  --blue:       #2563eb;
+  --blue-bg:    #dbeafe;
+  --blue-bd:    rgba(37,99,235,0.28);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text:       #f9fafb;
+    --text-muted: #9ca3af;
+    --text-faint: #6b7280;
+    --bg:         #111827;
+    --surface:    #1f2937;
+    --border:     rgba(255,255,255,0.08);
+    --border-mid: rgba(255,255,255,0.14);
+    --green:      #34d399;
+    --green-bg:   rgba(52,211,153,0.12);
+    --red:        #f87171;
+    --red-bg:     rgba(248,113,113,0.12);
+    --amber:      #fbbf24;
+    --amber-bg:   rgba(251,191,36,0.12);
+    --amber-bd:   rgba(251,191,36,0.3);
+    --blue:       #60a5fa;
+    --blue-bg:    rgba(96,165,250,0.12);
+    --blue-bd:    rgba(96,165,250,0.3);
+  }
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: var(--bg); color: var(--text); font-family: "Inter", sans-serif; font-size: 15px; line-height: 1.5; min-height: 100vh; }
+#root { max-width: 1200px; margin: 0 auto; padding: 28px 24px 60px; }
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; }
+input[type="number"] { -moz-appearance: textfield; }
+select { appearance: none; background: var(--surface); border: 0.5px solid var(--border-mid); border-radius: 8px; padding: 6px 28px 6px 10px; color: var(--text); font-family: "Inter", sans-serif; font-size: 13px; cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 8px center; }
+select:focus { outline: none; border-color: var(--blue); }
+.bi  { background: transparent; border: 0.5px solid var(--border-mid); border-radius: 6px; padding: 4px 8px; color: var(--text); font-family: "JetBrains Mono", monospace; font-size: 13px; width: 100%; }
+.bi:focus { outline: none; border-color: var(--blue); }
+.bn  { background: transparent; border: none; border-bottom: 0.5px solid var(--border); color: var(--text); font-family: "Inter", sans-serif; font-size: 13px; padding: 2px 4px; width: 100%; }
+.bn:focus { outline: none; }
+.bd  { background: var(--surface); border: 0.5px solid var(--border-mid); border-radius: 6px; padding: 3px 6px; color: var(--text-muted); font-family: "Inter", sans-serif; font-size: 11px; }
+.bd:focus { outline: none; color: var(--text); }
+.bb  { display: inline-flex; align-items: center; gap: 5px; padding: 5px 12px; border-radius: 8px; border: 0.5px solid var(--border-mid); background: transparent; color: var(--text); font-family: "Inter", sans-serif; font-size: 13px; cursor: pointer; transition: background .1s; }
+.bb:hover { background: var(--surface); }
+.bbp { background: var(--blue-bg) !important; color: var(--blue) !important; border-color: var(--blue-bd) !important; }
+.bbd { color: var(--red) !important; border-color: transparent !important; }
+.bbd:hover { background: var(--red-bg) !important; }
+.tb  { padding: 5px 14px; border-radius: 8px; font-size: 13px; font-family: "Inter", sans-serif; border: 0.5px solid transparent; cursor: pointer; background: transparent; color: var(--text-muted); transition: all .15s; }
+.tb:hover { background: var(--surface); }
+.tb.on { background: var(--blue-bg); color: var(--blue); border-color: var(--blue-bd); }
+.irow { display: flex; flex-direction: column; margin-bottom: 6px; padding: 7px 8px; background: var(--bg); border-radius: 8px; border: 0.5px solid var(--border); }
+@keyframes pulse { 0%,100%{opacity:1}50%{opacity:.35} }
+.pulse { animation: pulse 1.5s ease-in-out infinite; }
